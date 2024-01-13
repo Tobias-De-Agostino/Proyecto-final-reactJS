@@ -1,0 +1,29 @@
+.btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #111111;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 15px; }
+
+.product {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 5px 5px 15px #7d7d7d; }
+    .product img {
+        width: 250px;
+        height: 270px;
+        margin-bottom: 20px; }
+    .product h3 {
+        font-size: 25px;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-family: Bebas; }
+    .product p {
+        font-size: 16px;
+        color: #111111;
+        margin-bottom: 15px;
+        font-weight: 800; }
+    .product a {
+        font-family: Bebas; }
