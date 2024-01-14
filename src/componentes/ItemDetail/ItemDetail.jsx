@@ -24,38 +24,38 @@ const ItemDetail = ({ item }) => {
         navigate(-1)
     }
 
-    return (
-        <div className="container m-auto mt-8">
-            <Boton className="btn-2" onClick={handleVolver}>Volver</Boton>
-            <h3 className="mt-4 text-2xl font-semibold">{item.name}</h3>
-            <hr />
+return (
+    <div className="container m-auto mt-8">
+        <Boton className="btn-2" onClick={handleVolver}>Volver</Boton>
+        <h3 className="mt-4 text-2xl font-semibold">{item.name}</h3>
+        <hr />
 
 
-            <div className="flex gap-8 pt-4">
-                <img src={item.img} alt={item.name} />
+        <div className="flex gap-8 pt-4">
+            <img src={item.img} alt={item.name} />
 
-                <div>
-                    <p>{item.description}</p>
-                    <p className="text-xl font-bold">Precio: ${item.price}</p>
-            
+            <div>
+                <p>{item.description}</p>
+                <p className="text-xl font-bold">Precio: ${item.price}</p>
+        
 
 
-                {
-                    isInCart( item.id )
-                        ? <Boton><Link to="/cart">Terminar mi compra</Link></Boton>
-                        : <>
-                            <QuantitySelector 
-                                cantidad={cantidad}
-                                stock={item.stock}
-                                setCantidad={ setCantidad }
-                            />          
-                            <Boton onClick={handleAgregar} disabled={item.stock === 0}>Agregar al carrito</Boton>
-                        </>
-                    }
-                </div>
+            {
+                isInCart( item.id )
+                    ? <Boton><Link to="/cart">Terminar mi compra</Link></Boton>
+                    : <>
+                        <QuantitySelector 
+                            cantidad={cantidad}
+                            stock={item.stock}
+                            setCantidad={ setCantidad }
+                        />          
+                        <Boton onClick={handleAgregar} disabled={item.stock === 0}>Agregar al carrito</Boton>
+                    </>
+                }
             </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default ItemDetail;
