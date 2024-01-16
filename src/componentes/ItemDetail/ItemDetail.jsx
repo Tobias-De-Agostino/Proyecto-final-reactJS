@@ -33,7 +33,7 @@ return (
 
         <div className="flex gap-8 pt-4">
             <img src={item.img} alt={item.name} />
-
+            
             <div>
                 <p>{item.description}</p>
                 <p className="text-xl font-bold">Precio: ${item.price}</p>
@@ -56,6 +56,10 @@ return (
         </div>
     </div>
 );
+console.log("Nombre:", item.name);
+console.log("Imagen:", item.img);
+console.log("Precio:", item.price);
+
 };
 
 export default ItemDetail;
